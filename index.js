@@ -172,6 +172,31 @@ if (password && passwordField) {
   password.addEventListener("blur", () => passwordField.classList.remove("active"));
 }
 
+const contactName = document.getElementById("contact-name");
+const contactNameBox = document.getElementById("contact-name-box");
+
+if (contactName && contactNameBox) {
+  contactName.addEventListener("focus", () => contactNameBox.classList.add("active"));
+  contactName.addEventListener("blur", () => contactNameBox.classList.remove("active"));
+}
+
+const contactEmail = document.getElementById("contact-email");
+const contactEmailBox = document.getElementById("contact-email-box");
+
+if (contactEmail && contactEmailBox) {
+  contactEmail.addEventListener("focus", () => contactEmailBox.classList.add("active"));
+  contactEmail.addEventListener("blur", () => contactEmailBox.classList.remove("active"));
+}
+
+const contactMessage = document.getElementById("contact-message");
+const contactMessageBox = document.getElementById("contact-message-box");
+
+if (contactMessage && contactMessageBox) {
+  contactMessage.addEventListener("focus", () => contactMessageBox.classList.add("active"));
+  contactMessage.addEventListener("blur", () => contactMessageBox.classList.remove("active"));
+}
+
+
 // ===== Form submit button =====
 const submitBtn = document.getElementById("signin-btn");
 const formContainer = document.getElementById("signin-form");

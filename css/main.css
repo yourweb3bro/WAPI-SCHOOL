@@ -594,6 +594,7 @@ img {
   border-radius: 50%;
   border: var(--border1);
   transition: var(--transition-slow);
+  cursor: pointer;
 }
 .social-icon:hover {
   border-color: var(--hover);
@@ -756,11 +757,84 @@ img {
   display: flex;
   flex-direction: column;
   padding: 0 var(--mobile-section-side-padding);
+  color: var(--text-black-body);
+}
+
+.about-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 2.4rem;
+}
+
+.founder-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+@media (max-width: 768px) {
+  .about-page-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .founder-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.founder-img {
+  border-radius: 999px;
+  border: 8px solid var(--stroke);
+  overflow: hidden;
+  background-image: url("/image/professor-eyo-Ita.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  width: 160px;
 }
 
 
 
-/* Portal signin page  */
+/* Contact Page */
+.contact-page-section {
+  display: flex;
+  gap: 10px;
+  flex-direction: wrap;
+  justify-content: center;
+  padding: 0 var(--mobile-section-side-padding);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contact-page-section .contact-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.8px;
+  color: var(--text-black-body);
+  }
+  .contact-page-section .contact-list svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+.contact-page-section {
+  flex-direction: column;
+  align-items: center;
+}
+
+}
+
+/* Portal signin page */
 .form-page-body {
   overflow: hidden;
   height: 100vh;
@@ -843,13 +917,13 @@ img {
 .text-input-group svg {
   color: var(--signin-form-svg);
 }
-.text-input-group input {
+.text-input-group input, .message-textarea {
   background-color: transparent;
   width: 100%;
   border: none;
   outline: none;
 }
-.text-input-group input::placeholder {
+.text-input-group input::placeholder, .message-textarea {
   color: var(--signin-form-placeholder);
   font-size: 13px;
   font-weight: var(--font-regular);
