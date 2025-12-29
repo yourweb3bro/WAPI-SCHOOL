@@ -795,7 +795,7 @@ img {
   border-radius: 999px;
   border: 8px solid var(--stroke);
   overflow: hidden;
-  background-image: url("/image/professor-eyo-Ita.jpg");
+  background-image: url("../image/professor-eyo-Ita.jpg");
   background-size: cover;
   background-position: center;
   height: 160px;

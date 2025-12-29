@@ -119,16 +119,27 @@ if (btn) {
 
 /* Breadcrumb */
 function createBreadcrumb() {
-  // Select ID first, fallback to class
   const breadcrumb =
     document.getElementById("breadcrumb") ||
     document.querySelector(".breadcrumb");
 
-  // If neither exists → stop
   if (!breadcrumb) return;
 
-  const path = window.location.pathname;
-  const segments = path.split("/").filter(Boolean);
+  let segments = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+  /**
+   * GitHub Pages fix:
+   * Remove repo name (first segment)
+   * Example: /campus-earner/page → remove "campus-earner"
+   */
+  if (
+    window.location.hostname.includes("github.io") &&
+    segments.length > 0
+  ) {
+    segments.shift();
+  }
 
   let builtPath = "/";
   let html = `<a href="/">Home</a>`;
@@ -152,6 +163,7 @@ function createBreadcrumb() {
 }
 
 document.addEventListener("DOMContentLoaded", createBreadcrumb);
+
 
 
 
